@@ -4,10 +4,10 @@ Simple project in Python and [Google app engine][1]
 ## How it works
 
 1. HTTP requests and responses are handled by Google App engine endpoints.
-2. User profiles, conferences, and Session are stored in [ndb][2]
-3. Google + OAuth is needed to create a conference and a session
-4. Handle multiple inequality filters by in-memory filtering
-5. API can be tested by [Google api explorer][3]
+2. User profiles, conferences, and Session are stored in [ndb][2].
+3. Google + OAuth is needed to create a conference and a session.
+4. Handle multiple inequality filters by in-memory filtering.
+5. API can be tested by [Google api explorer][3].
 
 ## Dependencies
 - [Python][4] version 2.7.x or higher
@@ -16,13 +16,13 @@ Simple project in Python and [Google app engine][1]
 
 ### Cloning the source code.
 ```bash
-git clone https://github.com/SsureyMoon/Simple-Python-GoogleAppEngine.git
+git clone https://github.com/SsureyMoon/Python-GoogleAppEngine.git
 ```
 
 ### Setup environment
-Update the value of `application` in `app.yaml` to the app ID you have registered in the App Engine admin console and would like to use to host your instance of this sample. Visit [google developer console][5]
+Update the value of `application` in `app.yaml` to the app ID you have registered in the App Engine admin console and would like to use to host your instance of this sample. Visit [google developer console][5].
 
-In app.yaml:
+In `app.yaml`:
 ```yaml
 application: <your app id>
 version: 1
@@ -32,14 +32,16 @@ threadsafe: yes
 ```
 
 Update the values at the top of `settings.py` to reflect the respective client IDs you have registered in the [Developer Console][4].
-In settings.py:
+
+In `settings.py`:
 ```python
 WEB_CLIENT_ID = '<your client id from google developer console>'
 
 ```
 
-Update the value of CLIENT_ID in `static/js/app.js` to the Web client ID
-In static/js/app.js:
+Update the value of CLIENT_ID in `static/js/app.js` to the Web client ID.
+
+In `static/js/app.js`:
 ```javascript
 app.factory('oauth2Provider', function ($modal) {
     var oauth2Provider = {
